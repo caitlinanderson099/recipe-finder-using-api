@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rouge+Script&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Website Body */
+body {
+  background-color: #01151C;
+  color: #fbfbfb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* hex code for the gold colour #A59776 */
+
+
+/* Navbar */
+nav {
+  border-bottom: 2px solid #A59776;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Rouge Script", cursive;
+    h1 {
+      font-size: 3.3em;
+      color: #fbfbfb;
+    }
+    svg {
+      color: #A59776;
+      font-size: 2.6em;
+    }
+  }
+  a {
+    position: relative;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #fbfbfb;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background-color: #A59776;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+  .search-icon {
+    font-size: 1.3em;
+    color: #A59776;
+  }
+}
+
+/* Landing Page */
+.landing {
+  height: 80vh;
+  background-image: url('/section-bg3.jpg');
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 40px;
+  margin-bottom: 20px;
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fbfbfb;
+    .header {
+      font-family: "Rouge Script", cursive;
+      font-size: 6em;
+      span {
+        color: #A59776;
+        text-decoration: underline;
+      }
+    }
+    .search-bar {
+      display: flex;
+      gap: 1rem;
+      color: #fbfbfb;
+      input {
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #A59776;
+        font-size: 1em;
+        background-color: #01151C;
+        color: #fbfbfb;
+        &::placeholder {
+          color: #fbfbfb;
+          opacity: 1;
+        }
+      }
+      button {
+        background-color: #A59776;
+        width: 200px;        
+        color: #fbfbfb;
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        border-radius: 10px;
+        border: 2px solid #01151C;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background-color: #01151C;
+        border: 2px solid #A59776;
+        color: #A59776;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .right-side {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    img {
+      width: 300px;
+      height: 500px;
+      object-fit: cover;
+      border: 2px solid #A59776;
+    }
+  }
+}
+
+/* DIETARY SIGNS */
+.gf-tag {
+  border: 2px solid rgb(31, 164, 176);
+  padding: 5px;
+  font-weight: bold;
+  color: rgb(31, 164, 176);
+  border-radius: 50%;
+}
+
+.df-tag {
+  border: 2px solid cadetblue;
+  padding: 5px;
+  color: cadetblue;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.veg-tag {
+  border: 2px solid rgb(48, 221, 25);
+  padding: 5px;
+  color: rgb(48, 221, 25);
+  font-weight: bold;
+  border-radius: 60%;
+}
+
+.vegan-tag {
+  border: 2px solid rgb(22, 168, 117);
+  padding: 5px;
+  color: rgb(22, 168, 117);
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* Recommended Section */
+.for-you {
+  background-image: url('/section-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  background-color: #040E17;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+}
+
+/* Recipes in the Recommended Section */
+.suggested-recipes {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2rem;
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    border: 2px solid #A59776;
+    background-color: #01151C;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .recipe-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 20px;
+      flex-grow: 1;
+
+      .diet-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      button {
+        margin-top: auto;
+        background-color: #A59776;
+        font-size: 1em;
+        font-family: "Poppins", sans-serif;
+        color: #fbfbfb;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #A59776;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #01151C;
+        color: #A59776;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+/* About Blog Section */
+.blog-section {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  padding: 20px;
+  background-color: #01151C;
+  .left-side {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    img {
+      width: 100%;
+      height: 400px;
+      border: 2px solid #A59776;
+      object-fit: cover;
+    }
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    button {
+      width: 400px;
+      background-color: #A59776;
+      font-family: "Poppins", sans-serif;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #A59776;
+      color: #fbfbfb;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #01151C;
+      color: #A59776;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/* Latest Recipes Section */
+.latest-section {
+  background-image: url('/section-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  .latest-recipes {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    .recipe-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%; 
+      border: 2px solid #A59776;
+      background-color: #01151C;
+  
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+  
+      .recipe-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 20px;
+        flex-grow: 1;
+  
+        .diet-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+        }
+  
+        button {
+          margin-top: auto;
+          background-color: #A59776;
+          font-size: 1em;
+          font-family: "Poppins", sans-serif;
+          color: #fbfbfb;
+          padding: 10px;
+          border-radius: 10px;
+          border: 2px solid #A59776;
+          transition: all 0.3s ease;
+        }
+  
+        button:hover {
+          background-color: #01151C;
+          color: #A59776;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* Search Results List Section */
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 20px;
+
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    border: 2px solid #A59776;
+    background-color: #01151C;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .recipe-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 20px;
+      flex-grow: 1;
+
+      .diet-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      button {
+        margin-top: auto;
+        background-color: #A59776;
+        font-size: 1em;
+        font-family: "Poppins", sans-serif;
+        color: #fbfbfb;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #A59776;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #01151C;
+        color: #A59776;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Button + Title For Single Page & Results Page*/
+.button-title {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 2rem;
+  h2 {
+    font-size: 2em;
+  }
+  button {
+    background-color: #A59776;
+    color: #fbfbfb;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    border: 2px solid #A59776;
+    transition: all 0.3s ease;
+  }
+  button:hover {
+    background-color: #01151C;
+    color: #A59776;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+}
+
+
+/* Heading Section for Blog Page */
+.blog-header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  background-image: url('/section-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  h1 {
+    font-size: 3em;
+    color: #A59776;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1.2em;
+    color: #fbfbfb;
+  }
+}
+
+/* Author/Danny About Section */
+.author-section {
+  background-color: #040E17;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  .left-side {
+    display: flex;
+    gap: 2rem;
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border: 2px solid #A59776;
+    }
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    h2 {
+      font-size: 3em;
+    }
+    .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        svg {
+          font-size: 2em;
+          transition: all 0.3s ease;
+        }
+        svg:hover {
+          color: #A59776;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* Blog Posts Section */
+.blog-posts {
+  background-image: url('/section-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  color: #fbfbfb;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  .blog-post {
+    background-color: #01151C;
+    padding: 20px;
+    border: 2px solid #A59776;
+    h2 {
+      font-size: 2.2em;
+      color: #A59776;
+      margin-bottom: 10px;
+    }
+    .author {
+      font-size: 1em;
+      font-style: italic;
+      color: #A59776;
+    }
+    .blog-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .post-content {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 20px;
+      color: #A59776;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .read-more:hover {
+      color: #fbfbfb;
+    }
+  }
+}
