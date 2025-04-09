@@ -549,3 +549,81 @@ nav {
     }
   }
 }
+
+/* About Page */
+
+/* About Header Section */
+.about-header {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  padding: 20px;
+  align-items: center;
+  background-image: url('/section-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+    span {
+      color: #A59776;
+    }
+    button {
+      background-color: #A59776;
+      color: #fbfbfb;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #A59776;
+      font-family: "Poppins", sans-serif;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #040E17;
+      color: #A59776;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  }
+  .right-side {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: center;
+      border: 2px solid #A59776;
+    }
+  }
+}
+
+
+/* About Gallery Section */
+.gallery-section {
+  padding: 20px;
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}
+/* Gallery Container */
+.container {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    .tile img {
+      width: 100%;
+      object-fit: cover;
+      height: 300px;
+      border: 2px solid #A59776;
+      transition: all 0.3s ease;
+    }
+    .tile img:hover {
+      opacity: 60%;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+}

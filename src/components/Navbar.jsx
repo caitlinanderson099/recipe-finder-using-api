@@ -8,15 +8,15 @@ const Navbar = () => {
   return (
     <nav>
        <div className='logo'>
-              <IoRestaurant />
-              <h1>Le Savor</h1>
-              </div>
+          <IoRestaurant />
+          <h1>Le Savor</h1>
+        </div>
 
         <Link to='/'>Home</Link>
-        <Link to='/'>About</Link>
+        <Link to='/about'>About</Link>
         <Link to='/recipes'>Recipes</Link>
         <Link to='/blog'>Blog</Link>
-        <Link to='/'>Contact</Link>
+        <Link to='/contact'>Contact</Link>
         <BiSearch className='search-icon'/>
     </nav>
   )

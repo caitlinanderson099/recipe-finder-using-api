@@ -5,6 +5,8 @@ import ResultsPage from '../pages/ResultsPage'
 import SinglePage from '../pages/SinglePage'
 import Blog from '../pages/Blog'
 import Recipes from '../pages/Recipes'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
 
 import Breakfast from '../pages/food-pages/Breakfast'
 import Lunch from '../pages/food-pages/Lunch'
@@ -21,6 +23,8 @@ const Links = () => {
         <Route path="/results" element={<ResultsPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/recipes" element={<Recipes />} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact/>} />
 
         {/* Food Pages */}
         <Route path="/breakfast" element={<Breakfast />} />
