@@ -1,12 +1,10 @@
-# React + Vite
+# Le Savor Recipe Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## This project was created for educational purposes
 
-Currently, two official plugins are available:
+## Tools Used
+- Spoonacular API
+- VsCode
+- Canva
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+In order to continue my skills in frontend development, I created this website called Le Savor. Le Savor is a website to help users find the best recipes for their needs. Using Spoonacular API, I was able to create a website that assists users with finding the right recipe for their occasions.
