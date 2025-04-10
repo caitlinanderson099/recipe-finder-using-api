@@ -30,7 +30,7 @@ const ResultsPage = () => {
               <img src={recipe.image} alt={recipe.title} />
               <div className="recipe-details">
                 {/* Dietary Tags */}
-                <div className="diet-tags">
+                <div className="dietary-tags">
                   {recipe.vegetarian && <span className="veg-tag">V</span>}
                   {recipe.vegan && <span className="vegan-tag">VG</span>}
                   {recipe.glutenFree && <span className="gf-tag">GF</span>}
