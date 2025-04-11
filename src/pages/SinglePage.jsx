@@ -79,7 +79,8 @@ const RecipePage = () => {
               {recipe.vegetarian && <span className="veg-tag">V</span>}
               {recipe.vegan && <span className="vegan-tag">VG</span>}
               {recipe.glutenFree && <span className="gf-tag">GF</span>}
-              {recipe.dairyFree && <span className="df-tag">DF</span>}
+              {recipe.dairyFree && <span className="df-tag">DF
+              </span>}
             </div>
               <h2>Ingredients:</h2>
               <ul>
